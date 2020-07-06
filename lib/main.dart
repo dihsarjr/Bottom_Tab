@@ -1,3 +1,4 @@
+import 'package:bottom_tab/all.dart';
 import 'package:bottom_tab/category.dart';
 import 'package:flutter/material.dart';
 
@@ -28,6 +29,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _pages = [
     Category(),
+    All(),
   ];
   int selectedPageIndex = 0;
   void _selectPages(int index) {
