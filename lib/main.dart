@@ -27,6 +27,11 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final List<Widget> _pages = [];
   int selectedPageIndex = 0;
+  void _selectPages(int index) {
+    setState(() {
+      selectedPageIndex = index;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,9 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text('BottomTab'),
       ),
-      body: Center(),
+      body: _pages[selectedPageIndex],
       bottomNavigationBar: BottomNavigationBar(
-        onTap: null,
+        onTap: _selectPages,
         backgroundColor: Colors.yellow,
         unselectedItemColor: Colors.white,
         selectedItemColor: Colors.cyan,
