@@ -7,7 +7,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,11 +26,16 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+//  List
   final List<Widget> _pages = [
     Category(),
     All(),
   ];
+
+//  currentIndex
   int selectedPageIndex = 0;
+
+//  onTap function
   void _selectPages(int index) {
     setState(() {
       selectedPageIndex = index;
